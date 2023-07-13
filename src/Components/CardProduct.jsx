@@ -5,7 +5,7 @@ const CardProduct = ({ car }) => {
 
 
     return (
-        <div className="md:flex items-center mt-14 py-8 border-t-2 border-gray-200">
+        <div className="md:flex items-center mt-14 py-8 border-t-2 border-yellow-500 ">
             <div className="w-1/4">
                 <img src={car.image} />
             </div>

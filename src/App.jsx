@@ -1,16 +1,19 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Inicio from './Components/Inicio'
-import PublicRoute from './adapters/Routes/PublicRoute'
-import PrivateRoute from './adapters/Routes/PrivateRoute'
-import LoginScreen from './Components/LoginScreen'
 import DashboardRoutes from './adapters/Routes/DashboardRoutes'
+import PublicRoute from './adapters/Routes/PublicRoute'
+import Login from './adapters/Routes/Login'
 import { ProductsProvider } from './context/ProductsProvider'
 import { CartProvider } from './context/CartProvider'
 import Carrito from './Components/Carrito'
+import Registrar from './Components/Login/Registrar'
+import { PrivateRoute } from './adapters/Routes/PrivateRoute'
+import LoginScreen from './Components/Login/LoginScreen'
+import Error from './Components/Error'
+import CardList from './Components/CardList'
+import Product from './Components/Product'
+import Contact from './Components/Contact'
 
 function App() {
 
@@ -19,23 +22,26 @@ function App() {
     <BrowserRouter>
       <CartProvider>
         <ProductsProvider>
+
           <Routes>
+              <Route element={<PrivateRoute />}>
+                  <Route path='/inicio' element={<CardList />} />
+                  <Route path='inicio/carrito' element={<Carrito />} />
+                  <Route path='inicio/product/:id' element={<Product />} />
+                  <Route path='inicio/carrito' element={<Carrito />} />
+                  <Route path='/contact' element={<Contact />} />
+                  <Route path='/support' element={<Contact />} />
+              </Route>
 
-              <Route path="/login" element={
-                <PublicRoute>
-                  <LoginScreen />
-                </PublicRoute>
-              }
-              />
+              <Route element={<DashboardRoutes />}>
+                  <Route path='/login' element={<LoginScreen />} />
+                  <Route path='/registrar' element={<Registrar />} />
+              </Route>
 
-              <Route path="/*" element={
-                <PrivateRoute>
-                  <DashboardRoutes />
-                </PrivateRoute>
-              }
-              />
-
+              <Route path='*' element={<Error />}/>
           </Routes>
+
+
         </ProductsProvider>
       </CartProvider>
     </BrowserRouter>

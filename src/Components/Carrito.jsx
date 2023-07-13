@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { Link, NavLink, useNavigate, useParams } from 'react-router-dom'
 
 import CartContext from '../context/CartProvider'
@@ -6,7 +6,17 @@ import CardProduct from './CardProduct'
 
 const Carrito = () => {
 
-    const { carrito, total } = useContext(CartContext)
+    const { setCarrito, carrito, total, setTotal } = useContext(CartContext)
+
+    const limpiarCarrito = () => {
+        setCarrito([])
+        setTotal(0)
+    }
+
+
+    console.log(carrito)
+
+    let tax = total / 7.3;
 
     return (
         <div>
@@ -17,23 +27,28 @@ const Carrito = () => {
                     <div className="flex md:flex-row flex-col justify-center" id="cart">
                         <div className="lg:w-1/2 w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white overflow-y-auto overflow-x-hidden h-screen" id="scroll">
 
-                            <p className="text-5xl font-black leading-10 text-gray-800 pt-3">Bag</p>
-                              {
+                            <span className="text-5xl font-black leading-10 text-gray-800 pt-1">Bag</span>
+                            <span className=''>
+                                <button onClick={limpiarCarrito} className='pl-80 underline text-red-600 font-semibold '>
+                                    Limpiar carrito
+                                </button>
+                            </span>
+                            {
                                 carrito.length > 0 ?
                                     carrito.map(car => (
                                         <CardProduct car={car} key={car.id} />
                                     ))
 
                                     : <p className='flex items-center justify-center font-extrabold pt-20'>No hay productos en el carrito...</p>
-                             }
+                            }
                         </div>
                         <div className=" md:w-1/3 xl:w-1/4  bg-gray-100 h-full">
                             <div className="flex flex-col md:h-screen px-14 py-20 justify-between overflow-y-auto relative">
 
                                 <Link to='/inicio' className="text-sm pl-2 leading-none absolute top-3 right-4 hover:scale-125 transition duration-200">
-                                   
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"  strokeWidth="2" stroke="currentColor" className="stroke-3 w-6 h-6">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" strokeWidth="2" stroke="currentColor" className="stroke-3 w-6 h-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
 
@@ -46,13 +61,10 @@ const Carrito = () => {
                                         <p className="text-base leading-none text-gray-800 font-bold">Productos</p>
                                         <p className="text-base leading-none text-gray-800">{carrito.length}</p>
                                     </div>
-                                    <div className="flex items-center justify-between pt-5">
-                                        <p className="text-base leading-none text-gray-800 font-bold">Shipping</p>
-                                        <p className="text-base leading-none text-gray-800">$30</p>
-                                    </div>
+                                   
                                     <div className="flex items-center justify-between pt-5">
                                         <p className="text-base leading-none text-gray-800 font-bold">Tax</p>
-                                        <p className="text-base leading-none text-gray-800">$35</p>
+                                        <p className="text-base leading-none text-gray-800">${tax.toFixed(2) }</p>
                                     </div>
                                 </div>
                                 <div>
