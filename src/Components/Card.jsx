@@ -10,6 +10,7 @@ const Card = ({ product }) => {
 
     const [active, setActive] = useState(false)
     const [activo, setActivo] = useState(false)
+    console.log(active)
 
 
     const producto = {
@@ -43,7 +44,7 @@ const Card = ({ product }) => {
 
     return (
 
-        <div className=" bg-slate-50 p-1 rounded-3xl shadow-2xl">
+        <div className=" bg-white">
             <div className="relative   overflow-hidden rounded-xl p-5">
                 <Link to={`product/${id}`}>
                     <img src={image} alt="Hotel Photo" className='object-cover h-36 w-full ' />

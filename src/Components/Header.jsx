@@ -8,6 +8,12 @@ import Carousel from './Carousel';
 const Header = () => {
 
     const {total} = useContext(CartContext)
+    const navigate = useNavigate()
+
+    const handleLogOut = () => {
+        navigate('/login')
+        localStorage.removeItem('tokenn');
+    }
 
     return (
 
@@ -37,11 +43,11 @@ const Header = () => {
                                         Support
                                     </Link>
                                 </li>
-                                <li>
+                                <button onClick={handleLogOut}>
                                     <Link to='login' className="dark:text-amber-400 text-base font-medium pl-24 text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
-                                        Login
+                                        Log out
                                     </Link>
-                                </li>
+                                </button>
                             </ul>
                             <div className="md:w-2/12 justify-end flex items-center space-x-4 xl:space-x-8">
 

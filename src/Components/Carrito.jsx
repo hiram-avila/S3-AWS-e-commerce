@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react'
 import { Link, NavLink, useNavigate, useParams } from 'react-router-dom'
+import axios from 'axios'
 
 import CartContext from '../context/CartProvider'
 import CardProduct from './CardProduct'
@@ -8,13 +9,29 @@ const Carrito = () => {
 
     const { setCarrito, carrito, total, setTotal } = useContext(CartContext)
 
-    const limpiarCarrito = () => {
-        setCarrito([])
-        setTotal(0)
+    const limpiarCarrito = async() => {
+        try {
+            console.log('se intento eliminar el carrito')
+            const token = localStorage.getItem('tokenn');
+            const config = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
+                },
+            };
+
+            // Hacer la petición DELETE para eliminar el carrito del usuario
+           const {data} = await axios.delete('http://localhost:4000/carrito', config);
+            console.log(data)
+            // Actualizar el estado del carrito localmente para reflejar que está vacío
+            setCarrito([]);
+            setTotal(0)
+        } catch (error) {
+            console.error(error);
+        }
     }
 
 
-    console.log(carrito)
 
     let tax = total / 7.3;
 
@@ -61,10 +78,10 @@ const Carrito = () => {
                                         <p className="text-base leading-none text-gray-800 font-bold">Productos</p>
                                         <p className="text-base leading-none text-gray-800">{carrito.length}</p>
                                     </div>
-                                   
+
                                     <div className="flex items-center justify-between pt-5">
                                         <p className="text-base leading-none text-gray-800 font-bold">Tax</p>
-                                        <p className="text-base leading-none text-gray-800">${tax.toFixed(2) }</p>
+                                        <p className="text-base leading-none text-gray-800">${tax.toFixed(2)}</p>
                                     </div>
                                 </div>
                                 <div>

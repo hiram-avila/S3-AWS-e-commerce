@@ -15,7 +15,7 @@ const CardList = () => {
   const {productos} = useContext(ProductsContext)
 
   return (
-    <div className=" absolute bg-customColor grid grid-cols-4 gap-3 p-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 w-full overflow-hidden">
+    <div className=" absolute bg-white grid grid-cols-4 gap-3 p-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 w-full overflow-hidden">
             {
                 productos.length > 1? productos.map(product => (
                   <Card key={product.id} product={product} />
