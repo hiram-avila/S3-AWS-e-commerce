@@ -48,7 +48,7 @@ const Card = ({ product }) => {
                 </Link>
             </div>
 
-            <div className="mt-1 pb-2 p-1 max-h-24 ">
+            <div className="mt-1 pb-2 p-1 max-h-20">
                 <div className='h-15'>
                     <Link to={`product/${id}`} className="text-slate-700 text-base ">{limitedTitle}</Link>
                 </div>
