@@ -9,9 +9,6 @@ const Card = ({ product }) => {
     const { title, price, category, image, id } = product
 
     const [active, setActive] = useState(false)
-    const [activo, setActivo] = useState(false)
-    console.log(active)
-
 
     const producto = {
         id,
@@ -38,7 +35,6 @@ const Card = ({ product }) => {
             setActive(!active)
             
         }
-        
 
     }
 
