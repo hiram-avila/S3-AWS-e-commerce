@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import  { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 import CartContext from '../context/CartProvider';
@@ -30,7 +30,7 @@ const Card = ({ product }) => {
         setActivo(true)
 
         if(activo){
-            console.log('ya esta en el carrito')
+            console.log('Ya esta en el carrito')
         }else {
             setActive(!active)
             
