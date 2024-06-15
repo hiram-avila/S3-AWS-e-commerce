@@ -19,10 +19,7 @@ const Card = ({ product }) => {
     }
     const { setCarrito, carrito, addCart } = useContext(CartContext)
 
-    const MAX_WORDS = 2; // número máximo de palabras para el título
-    // Divide el título en palabras
     const words = title.split(" ");
-    // Limita el número de palabras y vuelve a unir el título
     const limitedTitle = words.slice(0, MAX_WORDS).join(" ");
 
     const handleClick2 = () => {
