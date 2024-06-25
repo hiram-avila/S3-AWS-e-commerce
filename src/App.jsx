@@ -26,9 +26,7 @@ function App() {
           <Routes>
               <Route element={<PrivateRoute />}>
                   <Route path='/inicio' element={<CardList />} />
-                  <Route path='inicio/carrito' element={<Carrito />} />
-                  <Route path='inicio/product/:id' element={<Product />} />
-                  <Route path='inicio/carrito' element={<Carrito />} />
+   
                   <Route path='/contact' element={<Contact />} />
                   <Route path='/support' element={<Contact />} />
               </Route>
