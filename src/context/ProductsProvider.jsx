@@ -13,8 +13,6 @@ const ProductsProvider = ({children}) => {
     const [mostrar, setMostrar] = useState(false)
 
     const form = useForm()
-
-                          // ?obteniendo productos de la api
     
     return(
         <ProductsContext.Provider
