@@ -19,14 +19,7 @@ const Product = () => {
     const producto = products;
 
 
-    useEffect(() => {
-        const obtenerProducto = () => {
-            const producto = productos.find(prod => prod.id == id)
-            setProducto(producto)
-        }
-        obtenerProducto()
-    }, [productos, id])
-
+    
     if (!producto) {
         return (
             <>
