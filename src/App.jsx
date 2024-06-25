@@ -6,6 +6,7 @@ import PublicRoute from './adapters/Routes/PublicRoute'
 import Login from './adapters/Routes/Login'
 import { ProductsProvider } from './context/ProductsProvider'
 import { CartProvider } from './context/CartProvider'
+import Carrito from './Components/Carrito'
 import Registrar from './Components/Login/Registrar'
 import { PrivateRoute } from './adapters/Routes/PrivateRoute'
 import LoginScreen from './Components/Login/LoginScreen'
@@ -25,7 +26,9 @@ function App() {
           <Routes>
               <Route element={<PrivateRoute />}>
                   <Route path='/inicio' element={<CardList />} />
-   
+                  <Route path='inicio/carrito' element={<Carrito />} />
+                  <Route path='inicio/product/:id' element={<Product />} />
+                  <Route path='inicio/carrito' element={<Carrito />} />
                   <Route path='/contact' element={<Contact />} />
                   <Route path='/support' element={<Contact />} />
               </Route>

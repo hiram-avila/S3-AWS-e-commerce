@@ -17,7 +17,7 @@ const Card = ({ product }) => {
         category: category,
         image: image
     }
-    const { addCart } = useContext(CartContext)
+    const { setCarrito, carrito, addCart } = useContext(CartContext)
 
     const MAX_WORDS = 2; // número máximo de palabras para el título
     // Divide el título en palabras
@@ -30,7 +30,7 @@ const Card = ({ product }) => {
         setActivo(true)
 
         if(activo){
-            console.log('Ya esta en el carrito')
+            console.log('ya esta en el carrito')
         }else {
             setActive(!active)
             
