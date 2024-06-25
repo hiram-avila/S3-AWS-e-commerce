@@ -5,7 +5,6 @@ import DashboardRoutes from './adapters/Routes/DashboardRoutes'
 import PublicRoute from './adapters/Routes/PublicRoute'
 import Login from './adapters/Routes/Login'
 import { ProductsProvider } from './context/ProductsProvider'
-import { CartProvider } from './context/CartProvider'
 import Carrito from './Components/Carrito'
 import Registrar from './Components/Login/Registrar'
 import { PrivateRoute } from './adapters/Routes/PrivateRoute'
@@ -20,7 +19,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <CartProvider>
         <ProductsProvider>
 
           <Routes>
@@ -43,7 +41,6 @@ function App() {
 
 
         </ProductsProvider>
-      </CartProvider>
     </BrowserRouter>
   )
 }

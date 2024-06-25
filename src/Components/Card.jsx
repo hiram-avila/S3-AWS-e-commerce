@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
-import CartContext from '../context/CartProvider';
 
 
 const Card = ({ product }) => {
@@ -17,7 +16,6 @@ const Card = ({ product }) => {
         category: category,
         image: image
     }
-    const { setCarrito, carrito, addCart } = useContext(CartContext)
 
     const MAX_WORDS = 2; // número máximo de palabras para el título
     // Divide el título en palabras
@@ -43,7 +41,7 @@ const Card = ({ product }) => {
         <div className=" bg-white">
             <div className="relative   overflow-hidden rounded-xl p-5">
                 <Link to={`product/${id}`}>
-                    <img src={image} alt="Hotel Photo" className='object-cover h-36 w-full ' />
+                    <img src={image} alt="Hotel Photo" className='object-cover h-full w-full ' />
 
                 </Link>
             </div>

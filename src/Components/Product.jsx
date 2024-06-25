@@ -5,7 +5,6 @@ import { Magnifier } from "react-image-magnifiers";
 import { HashLoader } from "react-spinners";
 
 import ProductsContext from '../context/ProductsProvider'
-import CartContext from '../context/CartProvider';
 import Cargando from './Cargando';
 import products from '../utils/constants/products';
 
