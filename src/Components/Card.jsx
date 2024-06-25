@@ -20,7 +20,6 @@ const Card = ({ product }) => {
     const { setCarrito, carrito, addCart } = useContext(CartContext)
 
     const words = title.split(" ");
-    const limitedTitle = words.slice(0, MAX_WORDS).join(" ");
 
     const handleClick2 = () => {
 
