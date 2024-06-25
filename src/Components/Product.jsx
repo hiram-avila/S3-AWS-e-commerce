@@ -16,9 +16,8 @@ const Product = () => {
 
     const { addCart } = useContext(CartContext)
     const { id } = useParams()
-    const productos = products;
+    const producto = products;
 
-    const [producto, setProducto] = useState(null)
 
     useEffect(() => {
         const obtenerProducto = () => {
