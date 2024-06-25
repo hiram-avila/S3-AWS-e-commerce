@@ -17,7 +17,7 @@ const Card = ({ product }) => {
         category: category,
         image: image
     }
-    const { setCarrito, carrito, addCart } = useContext(CartContext)
+    const { addCart } = useContext(CartContext)
 
     const MAX_WORDS = 2; // número máximo de palabras para el título
     // Divide el título en palabras
