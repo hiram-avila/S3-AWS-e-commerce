@@ -9,13 +9,14 @@ import { HashLoader } from "react-spinners";
 import ProductsContext from '../context/ProductsProvider'
 import CartContext from '../context/CartProvider';
 import Cargando from './Cargando';
+import products from '../utils/constants/products';
 
 
 const Product = () => {
 
-    const { productos } = useContext(ProductsContext)
     const { addCart } = useContext(CartContext)
     const { id } = useParams()
+    const productos = products;
 
     const [producto, setProducto] = useState(null)
 
