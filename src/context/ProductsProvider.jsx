@@ -10,15 +10,14 @@ const ProductsProvider = ({children}) => {
     const productosList = products;
     console.log(productosList)
     const [productos, setProducts] = useState(productosList);
-    const [mostrar, setMostrar] = useState(false)
 
     const form = useForm()
+
     
     return(
         <ProductsContext.Provider
             value={{
               productos,
-              mostrar,
               form
             }}
         >
