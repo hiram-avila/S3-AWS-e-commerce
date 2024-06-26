@@ -36,8 +36,6 @@ const Carrito = () => {
 
     return (
         <div>
-
-
             <div className="w-full h-full bg-black bg-opacity-90 top-0 overflow-y-hidden overflow-x-hidden fixed sticky-0 pt-10 " id="chec-div">
                 <div className="w-full absolute z-10 right-0 h-full overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700" id="checkout">
                     <div className="flex md:flex-row flex-col justify-center" id="cart">

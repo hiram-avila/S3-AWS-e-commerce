@@ -17,13 +17,10 @@ const CardList = () => {
   console.log(productos)
 
   return (
-    <div className=" absolute bg-white grid grid-cols-4 gap-3 p-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 w-full overflow-hidden">
-      <div>
-        {productos.map(product => (
-          <Card key={product.id} product={product} />
-        ))}
-      </div>
-
+    <div className="absolute bg-white grid grid-cols-4 gap-3 p-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 w-full overflow-hidden">
+      {productos.map(product => (
+        <Card key={product.id} product={product} />
+      ))}
     </div>
 
   );

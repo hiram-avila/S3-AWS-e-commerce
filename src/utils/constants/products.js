@@ -7,6 +7,14 @@ import image6 from '../../assets/products/cafetera2.webp'
 import image7 from '../../assets/products/cafetera3.webp'
 import image8 from '../../assets/products/chamarra.webp'
 import image9 from '../../assets/products/chamarra3.webp'
+import image10 from '../../assets/products/iphone.webp'
+import image11 from '../../assets/products/mochila.webp'
+import image12 from '../../assets/products/mochila2.webp'
+import image13 from '../../assets/products/monitor.webp'
+import image14 from '../../assets/products/sala.webp'
+import image15 from '../../assets/products/tv.webp'
+import image16 from '../../assets/products/tv2.webp'
+import image17 from '../../assets/products/watch.webp'
 
 
 const products = [
@@ -65,12 +73,69 @@ const products = [
         price: 19.99,
         category: "Categoría A",
         image: image8
-      }, {
+      }, 
+      {
         id: 1,
         title: "Producto 1",
         price: 19.99,
         category: "Categoría A",
         image: image9
+      },
+      {
+        id: 1,
+        title: "Producto 1",
+        price: 19.99,
+        category: "Categoría A",
+        image: image10
+      },
+      {
+        id: 1,
+        title: "Producto 1",
+        price: 19.99,
+        category: "Categoría A",
+        image: image11
+      },
+      {
+        id: 1,
+        title: "Producto 1",
+        price: 19.99,
+        category: "Categoría A",
+        image: image12
+      },
+      {
+        id: 1,
+        title: "Producto 1",
+        price: 19.99,
+        category: "Categoría A",
+        image: image13
+      },
+      {
+        id: 1,
+        title: "Producto 1",
+        price: 19.99,
+        category: "Categoría A",
+        image: image14
+      },
+      {
+        id: 1,
+        title: "Producto 1",
+        price: 19.99,
+        category: "Categoría A",
+        image: image15
+      },
+      {
+        id: 1,
+        title: "Producto 1",
+        price: 19.99,
+        category: "Categoría A",
+        image: image16
+      },
+      {
+        id: 1,
+        title: "Producto 1",
+        price: 19.99,
+        category: "Categoría A",
+        image: image17
       },
       
   ];
