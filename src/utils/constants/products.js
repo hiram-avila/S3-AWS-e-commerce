@@ -117,14 +117,14 @@ const products = [
     },
     {
         id: 15,
-        title: "TV",
+        title: "TV lg",
         price: 399.99,
         category: "Electronics",
         image: image15
     },
     {
         id: 16,
-        title: "TV 2",
+        title: "TV samusng",
         price: 499.99,
         category: "Electronics",
         image: image16
