@@ -38,7 +38,7 @@ const CartProvider = ({ children }) => {
     
 
 
-    const addCart = async(producto) => {
+    const addCart = (producto) => {
         console.log(carrito)
 
         const productoExistente = carrito.find((prod) => prod.id === producto.id);
@@ -51,18 +51,7 @@ const CartProvider = ({ children }) => {
             setCarrito([...carrito, producto])
             setTotal(total + parseFloat(producto.price))
         
-        const config = {
-            headers: {
-              "Content-Type": "application/json",   
-              Authorization: `Bearer ${token}`
-            }
-          }
-        try {
-            const {data} = await axios.post('http://localhost:4000/carrito',producto, config );
-         
-          } catch (error) {
-            console.error(error);
-          }
+    
 
     }
 

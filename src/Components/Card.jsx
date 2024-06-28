@@ -2,12 +2,13 @@ import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 import ProductsContext from '../context/ProductsProvider';
+import CartContext from '../context/CartProvider';
 
 
 const Card = ({ product }) => {
 
     const { title, price, category, image, id } = product
-    const {addCart} =useContext(ProductsContext)
+    const {addCart} =useContext(CartContext)
     const [active, setActive] = useState(false)
 
     const producto = {
