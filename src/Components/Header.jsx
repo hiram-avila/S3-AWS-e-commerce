@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import { useState } from 'react'
 import { Link, NavLink, useNavigate, useParams } from 'react-router-dom'
+import CartContext, { CartProvider } from '../context/CartProvider';
 import Carousel from './Carousel';
 
 
 const Header = () => {
 
+    const {total} = useContext(CartContext)
     const navigate = useNavigate()
 
     const handleLogOut = () => {
