@@ -7,7 +7,6 @@ import Carousel from './Carousel';
 
 const Header = () => {
 
-    const {total} = useContext(CartContext)
     const navigate = useNavigate()
 
     const handleLogOut = () => {
@@ -67,7 +66,7 @@ const Header = () => {
                                 <div className="hidden lg:flex items-center space-x-4 xl:space-x-8 ">
 
                                     <Link to='inicio/carrito' aria-label="go to cart" className="text-gray-800  p-3 dark:hover:text-gray-300 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 pl-6 ">
-                                        <p className='absolute pl-5 mb-1 ml-2 pb-1 font-mono  text-white'>${total.toFixed(2)}</p>
+                                        <p className='absolute pl-5 mb-1 ml-2 pb-1 font-mono  text-white'></p>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                                         </svg>

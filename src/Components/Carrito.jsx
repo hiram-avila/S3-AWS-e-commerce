@@ -19,11 +19,10 @@ const Carrito = () => {
                     Authorization: `Bearer ${token}`,
                 },
             };
-
-            // Hacer la petición DELETE para eliminar el carrito del usuario
+            
            const {data} = await axios.delete('http://localhost:4000/carrito', config);
             console.log(data)
-            // Actualizar el estado del carrito localmente para reflejar que está vacío
+           
             setCarrito([]);
             setTotal(0)
         } catch (error) {

@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
+import ProductsContext, { ProductsProvider } from '../context/ProductsProvider';
 
 
 const Card = ({ product }) => {
 
     const { title, price, category, image, id } = product
-
+    const {addCart} =useContext(ProductsContext)
     const [active, setActive] = useState(false)
 
     const producto = {
@@ -52,10 +53,11 @@ const Card = ({ product }) => {
                 <div className="flex justify-between">
                     <Link to={`product/${id}`} className="text-base text-sky-500 font-bold">${price}</Link>
 
-                    <div className={`rounded-lg ${!active ? 'bg-blue-500' : 'bg-green-400'} px-2 pt-1  text-white duration-100`}>
+                    <div className={`rounded-lg ${!active ? 'bg-blue-500' : 'bg-green-400'} px-2 pt-1  text-white duration-100 mb-2`}>
                         <button onClick={() => {
                             addCart(producto);
                             handleClick2();
+                           
                         }}>
                             {
                                 !active

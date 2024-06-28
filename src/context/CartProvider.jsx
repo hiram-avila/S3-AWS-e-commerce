@@ -7,7 +7,8 @@ const CartContext = createContext()
 const CartProvider = ({ children }) => {
 
     const [carrito, setCarrito] = useState([])
-    const [total, setTotal] = useState(0)
+    const [total, setTotal] = useState(1)
+    console.log(total)
 
     useEffect(() => {
         obtenerProductos()

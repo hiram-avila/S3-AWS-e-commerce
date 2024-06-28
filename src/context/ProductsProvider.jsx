@@ -13,7 +13,35 @@ const ProductsProvider = ({children}) => {
 
     const form = useForm()
 
-   
+                          // ?obteniendo productos de la api
+        useEffect(() => {
+            const fetchProducts = async () => {
+              try{
+                  const {data} = await axios("https://fakestoreapi.com/products");
+
+                  const newData2 = data.filter(dat => dat.category != 'jewelery' && dat.price != '56.99' )
+
+                const newData = newData2.map( products => {
+                  return{
+                    id:products.id,
+                    title: products.title,
+                    price: products.price,
+                    category:products.category,
+                    image:products.image
+                  }
+                })
+
+                  setMostrar(true)
+                  setProducts(newData);
+                }
+                catch (error){
+                  console.log(error)
+                }
+            }
+      
+          fetchProducts();
+        }, []);
+
           
 
     return(

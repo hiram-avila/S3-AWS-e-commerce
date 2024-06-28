@@ -11,6 +11,7 @@ export const PrivateRoute = () => {
  
   return (
     <>
+      <Header />
       <Outlet />
     </>
   );
