@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
-import ProductsContext, { ProductsProvider } from '../context/ProductsProvider';
+import ProductsContext from '../context/ProductsProvider';
 
 
 const Card = ({ product }) => {
@@ -17,7 +17,7 @@ const Card = ({ product }) => {
         category: category,
         image: image
     }
-
+    console.log(addCart)
     const MAX_WORDS = 2; 
     const words = title.split(" ");
     const limitedTitle = words.slice(0, MAX_WORDS).join(" ");
