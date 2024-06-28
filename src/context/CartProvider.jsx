@@ -61,7 +61,7 @@ const CartProvider = ({ children }) => {
             const {data} = await axios.post('http://localhost:4000/carrito',producto, config );
             console.log(data);
             console.log(carrito);
-            // Acciones adicionales después de guardar en el backend
+          
           } catch (error) {
             console.error(error);
           }
