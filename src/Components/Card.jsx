@@ -17,10 +17,8 @@ const Card = ({ product }) => {
         image: image
     }
 
-    const MAX_WORDS = 2; // número máximo de palabras para el título
-    // Divide el título en palabras
+    const MAX_WORDS = 2; 
     const words = title.split(" ");
-    // Limita el número de palabras y vuelve a unir el título
     const limitedTitle = words.slice(0, MAX_WORDS).join(" ");
 
     const handleClick2 = () => {
@@ -47,15 +45,14 @@ const Card = ({ product }) => {
                 </Link>
             </div>
 
-                <div className='h-15 px-5'>
-                    <Link to={`product/${id}`} className="text-slate-700 text-base">{limitedTitle}</Link>
-                </div>
+            <div className='h-15 px-5'>
+                <Link to={`product/${id}`} className="text-slate-700 text-base">{limitedTitle}</Link>
                 <p className="mt-1 pb-1 text-base text-slate-400">{category}</p>
 
                 <div className="flex justify-between">
                     <Link to={`product/${id}`} className="text-base text-sky-500 font-bold">${price}</Link>
 
-                    <div className={`rounded-lg ${!active ? 'bg-blue-500' : 'bg-green-400'} px-2 pt-1 text-white duration-100`}>
+                    <div className={`rounded-lg ${!active ? 'bg-blue-500' : 'bg-green-400'} px-2 pt-1  text-white duration-100`}>
                         <button onClick={() => {
                             addCart(producto);
                             handleClick2();
@@ -75,6 +72,7 @@ const Card = ({ product }) => {
                             }
                         </button>
                     </div>
+                </div>
             </div>
         </div>
 
