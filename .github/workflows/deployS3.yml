@@ -41,3 +41,4 @@ jobs:
           aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.jpg" --content-type "image/jpeg"
           aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.svg" --content-type "image/svg+xml"
           aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.woff2" --content-type "font/woff2"
+ 
