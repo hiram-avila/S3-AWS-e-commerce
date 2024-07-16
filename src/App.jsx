@@ -1,4 +1,3 @@
-import reactLogo from './assets/react.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import DashboardRoutes from './adapters/Routes/DashboardRoutes'

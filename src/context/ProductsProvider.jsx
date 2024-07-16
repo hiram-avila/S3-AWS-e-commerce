@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react'
 import { createContext } from 'react'
-import axios from 'axios';
 import { useForm } from '../Hooks/useForm';
 import products from '../utils/constants/products';
 
