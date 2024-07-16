@@ -27,13 +27,13 @@ const Navbar = () => {
     
    
   return (
-    <nav className="flex items-center justify-between bg-bg-nav text-xl text-gray-50 font-serif py-3 px-8  z-10 w-full ">
+    <nav className="flex items-center justify-between bg-bg-nav text-xl text-gray-50 font-serif py-3 px-8  z-9 w-full ">
       <div></div>
 
         <div className="flex items-center justify-center">
           <input 
               type="search" 
-              className="w-64 px-5 py-1 text-sm text-black bg-white rounded-2xl focus:outline-none flex-grow" 
+              className="w-64 px-5 py-1 text-sm text-black bg-white rounded-2xl focus:outline-none flex-grow" gir 
               placeholder={active ? 'Buscar en el carrito' : 'Buscar'} 
               value={search}
               onChange={(e)=>setSearch(e.target.value)}
