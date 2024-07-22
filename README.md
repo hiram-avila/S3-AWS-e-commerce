@@ -22,6 +22,11 @@ You can view the live demo of the application here: [React Frontend on S3](http:
 
 - **Responsive Design**: The application is designed to be responsive and work on all devices.
 - **Automated Deployment**: Changes to the codebase are automatically deployed to the S3 bucket.
+  
+## Backend Repository
+
+You can find the backend repository for this project here: [E-Commerce Backend Repository](https://github.com/hiram-avila/e-commerce-back-)
+
 
 ## Deployment
 
