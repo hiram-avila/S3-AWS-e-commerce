@@ -9,43 +9,20 @@ const Carrito = () => {
 
     const { setCarrito, carrito, total, setTotal } = useContext(CartContext)
 
-    const limpiarCarrito = async() => {
-        try {
-            console.log('se intento eliminar el carrito')
-            const token = localStorage.getItem('tokenn');
-            const config = {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${token}`,
-                },
-            };
-            
-           const {data} = await axios.delete('http://localhost:4000/carrito', config);
-            console.log(data)
-           
-            setCarrito([]);
-            setTotal(0)
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
-
-
+ console.log(total)
     let tax = total / 7.3;
 
     return (
         <div>
-
 
             <div className="w-full h-full bg-black bg-opacity-90 top-0 overflow-y-hidden overflow-x-hidden fixed sticky-0 pt-10 " id="chec-div">
                 <div className="w-full absolute z-10 right-0 h-full overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700" id="checkout">
                     <div className="flex md:flex-row flex-col justify-center" id="cart">
                         <div className="lg:w-1/2 w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white overflow-y-auto overflow-x-hidden h-screen" id="scroll">
 
-                            <span className="text-5xl font-black leading-10 text-gray-800 pt-1">Bag</span>
+                            <span className="text-5xl font-black leading-10 text-gray-800 pt-1">Carrito</span>
                             <span className=''>
-                                <button onClick={limpiarCarrito} className='pl-80 underline text-red-600 font-semibold '>
+                                <button  className='pl-80 underline text-red-600 font-semibold '>
                                     Limpiar carrito
                                 </button>
                             </span>
@@ -72,7 +49,7 @@ const Carrito = () => {
                                 </Link>
                                 <div className=''>
 
-                                    <p className="text-4xl font-black leading-9 text-gray-800">Summary</p>
+                                    <p className="text-4xl font-black leading-9  text-gray-800">Resumen</p>
                                     <div className="flex items-center justify-between pt-16">
                                         <p className="text-base leading-none text-gray-800 font-bold">Productos</p>
                                         <p className="text-base leading-none text-gray-800">{carrito.length}</p>

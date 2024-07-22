@@ -18,23 +18,11 @@ const Card = ({ product }) => {
         category: category,
         image: image
     }
-    console.log(addCart)
     const MAX_WORDS = 2; 
     const words = title.split(" ");
     const limitedTitle = words.slice(0, MAX_WORDS).join(" ");
 
-    const handleClick2 = () => {
-
-        setActivo(true)
-
-        if (activo) {
-            console.log('ya esta en el carrito')
-        } else {
-            setActive(!active)
-
-        }
-
-    }
+    
 
     return (
 
@@ -57,7 +45,6 @@ const Card = ({ product }) => {
                     <div className={`rounded-lg ${!active ? 'bg-blue-500' : 'bg-green-400'} px-2 pt-1  text-white duration-100 mb-2`}>
                         <button onClick={() => {
                             addCart(producto);
-                            handleClick2();
                            
                         }}>
                             {

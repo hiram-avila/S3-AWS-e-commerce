@@ -7,35 +7,9 @@ const CartContext = createContext()
 const CartProvider = ({ children }) => {
 
     const [carrito, setCarrito] = useState([])
-    const [total, setTotal] = useState(1)
+    const [total, setTotal] = useState(0)
     console.log(total)
 
-    useEffect(() => {
-        obtenerProductos()
-    }, [])
-
-    const obtenerProductos = async() => {
-        try {
-            
-            const token = localStorage.getItem('tokenn')
-    
-            const config = {
-                headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Bearer ${token}`
-                }
-              }
-            const {data} = await axios('http://localhost:4000/carrito', config)
-            setCarrito( data.productos)
-            
-
-            console.log(data.productos)
-        } catch (error) {
-            console.error(error);
-            
-        }
-    }
-    
 
 
     const addCart = async(producto) => {
@@ -57,14 +31,7 @@ const CartProvider = ({ children }) => {
               Authorization: `Bearer ${token}`
             }
           }
-        try {
-            const {data} = await axios.post('http://localhost:4000/carrito',producto, config );
-            console.log(data);
-            console.log(carrito);
-          
-          } catch (error) {
-            console.error(error);
-          }
+       
 
     }
 
