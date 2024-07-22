@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import ProductsContext from '../context/ProductsProvider';
 import Card from './Card';
+import samsung from './../assets/products/samsung.webp';
+ 
 
 
 const CardList = () => {
@@ -11,7 +13,7 @@ const CardList = () => {
       {/* Header Image */}
       <div className="relative w-full h-90 flex justify-center mt-2"> {/* Ajusta h-80 según sea necesario */}
         <img
-          src="https://assetspwa.liverpool.com.mx/assets/digital/home/img/jul24/samsung_GB100724.jpg"
+          src={samsung}
           alt="Header"
           style={{
             width: '90%',
