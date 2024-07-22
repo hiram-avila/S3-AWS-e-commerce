@@ -43,7 +43,7 @@ const Card = ({ product }) => {
                     <Link to={`product/${id}`} className="text-base text-sky-500 font-bold">${price}</Link>
 
                     <div className={`rounded-lg ${!active ? 'bg-blue-500' : 'bg-green-400'} px-2 pt-1  text-white duration-100 mb-2`}>
-                        <button onClick={() => {
+                        <button id='button' name='carrito' onClick={() => {
                             addCart(producto);
                            
                         }}>
