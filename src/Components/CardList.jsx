@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
 import { useContext } from 'react';
 import { HashLoader } from "react-spinners";
-
-
+import Image from 'next/image';
 
 import ProductsContext from '../context/ProductsProvider';
 import Card from './Card';
