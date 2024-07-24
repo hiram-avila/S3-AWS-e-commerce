@@ -33,12 +33,11 @@ jobs:
 
       - name: Sync files to S3
         run: |
-          aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.html" --content-type "text/html"
-          aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.css" --content-type "text/css"
-          aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.js" --content-type "application/javascript"
-          aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.json" --content-type "application/json"
-          aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.png" --content-type "image/png"
-          aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.jpg" --content-type "image/jpeg"
-          aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.svg" --content-type "image/svg+xml"
-          aws s3 sync dist/ s3://hiram-bucket/ --exclude "*" --include "*.woff2" --content-type "font/woff2"
- 
+          aws s3 sync dist/ s3://hiram-bucket/ --delete --exclude "*" --include "*.html" --content-type "text/html"
+          aws s3 sync dist/ s3://hiram-bucket/ --delete --exclude "*" --include "*.css" --content-type "text/css"
+          aws s3 sync dist/ s3://hiram-bucket/ --delete --exclude "*" --include "*.js" --content-type "application/javascript"
+          aws s3 sync dist/ s3://hiram-bucket/ --delete --exclude "*" --include "*.json" --content-type "application/json"
+          aws s3 sync dist/ s3://hiram-bucket/ --delete --exclude "*" --include "*.png" --content-type "image/png"
+          aws s3 sync dist/ s3://hiram-bucket/ --delete --exclude "*" --include "*.jpg" --content-type "image/jpeg"
+          aws s3 sync dist/ s3://hiram-bucket/ --delete --exclude "*" --include "*.svg" --content-type "image/svg+xml"
+          aws s3 sync dist/ s3://hiram-bucket/ --delete --exclude "*" --include "*.woff2" --content-type "font/woff2"
