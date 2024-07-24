@@ -24,6 +24,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: List build directory
+        run: ls -la dist
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -32,5 +35,4 @@ jobs:
           aws-region: us-east-1  
 
       - name: Sync files to S3
-        run: |
-          aws s3 sync dist/ s3://hiram-bucket/ --delete --acl public-read
+        run: aws s3 sync dist/ s3://hiram-bucket/ --delete
