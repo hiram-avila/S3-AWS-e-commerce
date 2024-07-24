@@ -8,7 +8,7 @@ import CartContext from '../context/CartProvider';
 const Card = ({ product }) => {
 
     const { title, price, category, image, id } = product
-    const {addCart} =useContext(CartContext)
+    const { addCart } = useContext(CartContext)
     const [active, setActive] = useState(false)
 
     const producto = {
@@ -18,11 +18,11 @@ const Card = ({ product }) => {
         category: category,
         image: image
     }
-    const MAX_WORDS = 2; 
+    const MAX_WORDS = 2;
     const words = title.split(" ");
     const limitedTitle = words.slice(0, MAX_WORDS).join(" ");
 
-    
+
 
     return (
 
@@ -43,10 +43,15 @@ const Card = ({ product }) => {
                     <Link to={`product/${id}`} className="text-base text-sky-500 font-bold">${price}</Link>
 
                     <div className={`rounded-lg ${!active ? 'bg-blue-500' : 'bg-green-400'} px-2 pt-1  text-white duration-100 mb-2`}>
-                        <button id='button' name='carrito' onClick={() => {
-                            addCart(producto);
-                           
-                        }}>
+                        <button
+                            id='button'
+                            name='carrito'
+                            onClick={() => {
+                                addCart(producto);
+                            }}
+                            aria-label={active ? 'Remove from cart' : 'Add to cart'}
+                            title={active ? 'Remove from cart' : 'Add to cart'}
+                        >
                             {
                                 !active
                                     ? (
@@ -61,6 +66,7 @@ const Card = ({ product }) => {
                                     )
                             }
                         </button>
+
                     </div>
                 </div>
             </div>
