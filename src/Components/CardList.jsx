@@ -16,7 +16,7 @@ const CardList = () => {
           src={samsung}
           alt="phone"
           style={{
-            width: '90%',
+            width: '80%',
             height: '100%',
             objectFit: 'cover',
           }}
