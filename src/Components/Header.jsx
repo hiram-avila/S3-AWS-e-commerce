@@ -17,9 +17,8 @@ const Header = () => {
     return (
 
         <div className="dark:bg-gray-600">
-        <div>
           <div className="relative">
-            <div className="dark:bg-gray-900 bg-gray-50 px-6 py-6">
+            <div className="dark:bg-gray-900 bg-gray-50 px-6 py-6 ">
               <div className="container mx-auto flex items-center justify-between">
                 <Link to='/inicio' className="text-xl font-bold text-center text-gray-800 py-2 bg-amber-400 p-1 rounded-lg shadow-lg" aria-label="the Crib.">
                   REACT
@@ -40,17 +39,17 @@ const Header = () => {
                       Support
                     </Link>
                   </li>
+                </ul>
                   <li>
                     <button
                       onClick={handleLogOut}
-                      className="dark:text-amber-400 text-base font-medium text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                      className="dark:text-amber-400 text-base font-medium text-gray-800 focus:outline-none focus:ring-2 mr-2 focus:ring-gray-800 hover:underline"
                       aria-label="Log out"
                     >
                       Log out
                     </button>
                   </li>
-                </ul>
-                <div className="md:w-2/12 justify-end flex items-center space-x-4 xl:space-x-8">
+                <div className=" justify-end flex items-center space-x-4 xl:space-x-8">
                   <div className='flex justify-between'>
                     <div className="hidden lg:flex items-center">
                       <input type='text' aria-label="search items" className="rounded-tl-xl rounded-bl-xl text-black dark:hover:text-black dark:text-white focus:outline-none focus:ring-2 focus:text-black p-1" />
@@ -78,7 +77,6 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
