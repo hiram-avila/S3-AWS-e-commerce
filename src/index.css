@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.no-caret {
+    caret-color: transparent;
+  }
