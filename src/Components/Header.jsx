@@ -22,23 +22,7 @@ const Header = () => {
                     <Link to='/inicio' className="text-xl font-bold text-center text-gray-800 py-2 bg-amber-400 p-1 rounded-lg shadow-lg" aria-label="the Crib.">
                         REACT
                     </Link>
-                        <ul className="hidden w-8/12 md:flex items-center justify-center space-x-8">
-                            <li>
-                                <Link to='/inicio' className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Home
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to='/contact' className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Contact
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to='/support' className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Support
-                                </Link>
-                            </li>
-                        </ul>
+                     
                     <li>
                         <button
                             onClick={handleLogOut}
