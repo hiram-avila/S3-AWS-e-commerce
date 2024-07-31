@@ -22,7 +22,6 @@ const Header = () => {
                     <Link to='/inicio' className="text-xl font-bold text-center text-gray-800 py-2 bg-amber-400 p-1 rounded-lg shadow-lg" aria-label="the Crib.">
                         REACT
                     </Link>
-                    <div className='flex justify-between'>
                         <ul className="hidden w-8/12 md:flex items-center justify-center space-x-8">
                             <li>
                                 <Link to='/inicio' className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
@@ -40,7 +39,6 @@ const Header = () => {
                                 </Link>
                             </li>
                         </ul>
-                    </div>
                     <li>
                         <button
                             onClick={handleLogOut}
